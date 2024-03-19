@@ -11,9 +11,9 @@ def reckless_file_reader(file_path: str) -> None:
 
 
 # When an unhandled exception occurs, the application will be terminated.
-# We can avoid the this by wrapping the code in a try statement.
+# We can avoid this by ###wrapping the code in a try statement.###
 # This next function will show you what not to do.
-# Seriously, NEVER do this. This is known as eating an exceptions.
+# Seriously, NEVER do this. This is known as ###eating an exception.###
 # This anti-pattern will hide bugs in your code and cause endless headache.
 def quick_way_to_get_fired(file_path: str) -> None:
     try:
@@ -22,13 +22,14 @@ def quick_way_to_get_fired(file_path: str) -> None:
         pass
 
 
-# Once we know our code has the potential to raise exceptions, we can handle the exception properly like the code below.
+# Once we know our code has the potential to raise exceptions,
+# we can ###handle the exception properly### like the code below.
 # We can determine which exceptions are raised by
 # looking at the documentation and/or source code for the apis we are interacting with.
 def single_exception_handling_reader(file_path: str) -> None:
     try:
         reckless_file_reader(file_path)
-    except FileNotFoundError as e:
+    except FileNotFoundError as e:  #CREATING AN EXCEPTION HANDLER
         print("Could not find the file with the provided path.")
         logging.error(e)
 
@@ -48,26 +49,28 @@ def multiple_exception_handling_reader(file_path: str) -> None:
 # Sometimes we intend to handle different exceptions in the same way.
 # If these errors share the same base class, we can simply catch the base class.
 # FileNotFoundError and PermissionError share the same base class (OSError).
-# In order to avoid having repetitive code we could simply provide an except clause matching the base class.
+# In order to avoid having repetitive code we could simply
+# ***provide an except clause *** matching the base class.
 def base_class_exception_handling_reader(file_path: str) -> None:
     try:
         reckless_file_reader(file_path)
-    except OSError as e:
+    except OSError as e: #EXCEPTION CLAUSE
         print("Error opening the file. Please ensure the file exists and has appropriate permissions.")
         logging.error(e)
 
 
 # If we want to handle different exceptions in the same way but those exceptions don't share a base class,
-# we can use a tuple to handle them in the same except clause.
+# we can *** use a tuple to handle them*** in the same except clause.
 def tuple_exception_handling_reader(file_path: str) -> None:
     try:
         reckless_file_reader(file_path)
-    except (FileNotFoundError, PermissionError) as e:
+    except (FileNotFoundError, PermissionError) as e: #TUPLE HANDLER
         print("Error opening the file. Please ensure the file exists and has appropriate permissions.")
         logging.error(e)
 
 
-# In order to make our code more robust, let's separate the responsibility of opening the file and processing the file.
+# In order to make our code more robust, let's separate the responsibility
+# of opening the file and processing the file.
 def process_file(file) -> None:
     for line in file:
         print(line)
