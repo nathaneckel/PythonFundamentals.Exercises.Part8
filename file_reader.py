@@ -1,6 +1,4 @@
 import logging
-
-
 # This function will attempt to open a file and process it.
 # What could go wrong?
 def reckless_file_reader(file_path: str) -> None:
@@ -46,6 +44,7 @@ def multiple_exception_handling_reader(file_path: str) -> None:
         logging.error(e)
 
 
+
 # Sometimes we intend to handle different exceptions in the same way.
 # If these errors share the same base class, we can simply catch the base class.
 # FileNotFoundError and PermissionError share the same base class (OSError).
@@ -76,9 +75,10 @@ def process_file(file) -> None:
         print(line)
 
 
-# This time we provide clauses for all of the known potential issues.
+# This time we provide clauses for all known potential issues.
 # The request to process the file is only issued if no exceptions occur.
-# Regardless of what took place, at the end of the function, the resource (file) is closed.
+# Regardless of what took place, at the end of the function,
+# the resource (file) is closed.
 def better_file_reader(file_path: str) -> None:
     file = None
     try:
