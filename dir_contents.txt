@@ -1,0 +1,11 @@
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory1\* - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory2\myfile.txt - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory2\* - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/file1.py - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/child.txt - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory1\myfile.txt - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory2/child4.py - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory2/child2.py - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory1/child.py - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory1/child.txt - I just wrote this! 
+/Users/nathan/Dev/Labs/PythonFundamentals.Exercises.Part8/Exercise2/ChildDirectory1/child3.py - I just wrote this! 
